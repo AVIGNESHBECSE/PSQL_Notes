@@ -19,6 +19,20 @@ CREATE TABLE users (
 );
 ```
 
+```sql
+CREATE TABLE parent_table (
+    id SERIAL PRIMARY KEY,
+    value INT CHECK (value >= 0) 
+);
+```
+
+```sql
+CREATE TABLE child_table (
+    id SERIAL PRIMARY KEY,
+    parent_id INT REFERENCES parent_table(id)
+);
+```
+
 Now, I've already have grip on basic DDL, DML, TCL, DQL and DCL so I assume you already know how to use with other SQL operations and clauses like WHERE, HAVING, and etc
 
 Starting off with next basics, *transaction*
