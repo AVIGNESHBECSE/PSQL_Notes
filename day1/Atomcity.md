@@ -66,7 +66,8 @@ SET statement_timeout = '100ms';
 
 BEGIN;
 
-INSERT INTO users (email, password) VALUES ('test@mail.com', 'hashed_pass');
+INSERT INTO users (email, password) 
+	VALUES ('test@mail.com', 'hashed_pass');
 
 SELECT pg_sleep(1);
 
@@ -89,7 +90,8 @@ ROLLBACK
 
 BEGIN;
 
-INSERT INTO users (email, password) VALUES ('test@mail.com', 'hashed_pass');
+INSERT INTO users (email, password) 
+	VALUES ('test@mail.com', 'hashed_pass');
 
 COMMIT;
 
