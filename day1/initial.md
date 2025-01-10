@@ -15,7 +15,7 @@ CREATE TABLE users (
     password VARCHAR(255) NOT NULL, 
     name VARCHAR(100),
     is_active BOOLEAN DEFAULT TRUE,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 ```
 
@@ -41,4 +41,6 @@ Basic syntax :
 ```
 That's all for initial basics here, moving forward with ACID properties and related SQL with each .md file
 
-> Move to Atomicity.md
+Oh, and if you're wondering why I'm using caps for command despite SQL being case insensitive, well it makes the statements more readable so keep your code and statements tidy!
+
+> Move to `Atomicity.md`
