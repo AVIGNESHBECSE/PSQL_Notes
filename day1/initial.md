@@ -37,7 +37,8 @@ Basic syntax :
 
 [COMMIT / ROLLBACK] 
 
- -- Automatic rollback is called when any of SQL statement in above fails. Also Checkpoint can be declared within statements with ability to rollback onto given checkpoint.
+ -- Automatic rollback is called when any of SQL statement in above fails. 
+ -- Also Checkpoint can be declared within statements with ability to rollback onto given checkpoint.
 ```
 That's all for initial basics here, moving forward with ACID properties and related SQL with each .md file
 
