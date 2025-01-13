@@ -22,6 +22,6 @@ Once done, make sure to restart the postgresql [ `sudo systemctl restart postgre
 
 We will be using **jless** for viewing JSON file so, download if you need or use preferred text editor like VSCode 
 
-> Moving onto `log.md`
+> Moving onto [log.md](./log.md)
 
 
