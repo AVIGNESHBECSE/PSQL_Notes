@@ -7,7 +7,7 @@ SELECT * FROM users
     WHERE email = 'test@mail.com';
 ```
 
-The following output is stored on [q1.log](./q1.log)
+The following output is stored on [q1.json](./q1.json)
 
 Keys that we will be observing are `ps`, `message`, and `detail`
 
