@@ -58,4 +58,4 @@ That's all for initial basics here, moving forward with ACID properties and rela
 
 Oh, and if you're wondering why I'm using caps for command despite SQL being case insensitive, well it makes the statements more readable so keep your code and statements tidy!
 
-> Move to `Atomicity.md`
+> Move to [Atomicity.md](./Atomicity.md)

@@ -49,5 +49,7 @@ has been flushed to the data files.
 3. During recovery, PostgreSQL replays WAL record from last checkpoint.
 
  
+Now further detailed log regarding WAL records, checkpoint and such will be shared on day2 [log.md](../day2/log.md)
 
+> Move to next [day2](../day2) now.
 

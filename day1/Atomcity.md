@@ -110,5 +110,5 @@ COMMIT
 (1 row)
 ```
 
-> Moving onto next `Consistency.md`
+> Moving onto next [Consistency.md](./Consistency.md)
 

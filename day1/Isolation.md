@@ -243,4 +243,4 @@ Terminal 2 is aborted as we re-run with given modification on SQL statement
 However, as degree of isolation increased, we can find raise in likely-ness on
 deadlocks and performance overhead.
 
-> Last of ACID, `Durability.md`
+> Last of ACID, [Durability.md](./Durability.md)

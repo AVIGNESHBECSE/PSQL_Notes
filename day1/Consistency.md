@@ -51,4 +51,4 @@ DETAIL:  Failing row contains (1, -1).
 ROLLBACK
 ```
 
-> Let's go ahead with `Isolation.md`, shall we?
+> Let's go ahead with [Isolation.md](./Isolation.md), shall we?
