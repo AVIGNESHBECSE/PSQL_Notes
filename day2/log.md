@@ -55,4 +55,6 @@ At the end of log, we can observe that it took duration of 5.714 milliseconds ov
 
 PARSE ANALYSIS STATISTICS [3.9 ms] and then PLANNER STATISTICS [0.6 ms] took the most of time as it had to resolve, analyze and come up with efficient path.
 
+I will mention WAL [Write Ahead Log] on next
+
 > Moving on next [walrecord.md](./walrecord.md)
