@@ -57,4 +57,32 @@ This returns details about the last checkpoint, helping you correlate checkpoint
 
 We can infer that checkpoint occurred at given time and find the transaction ids as well.
 
-> Moving on next ... (Thinking)
+Initially, the dirty page [modifications] obtained from client requst are processed
+and stored within the WAL buffers.
+
+These buffers are flushed to disk on certain conditions, where it meet : 
+	i) Buffer is full
+	ii) Checkpoint occurrence
+	iii) Trasaction commits
+
+At first, it stores the WAL record on WAL segment files, which are we witnessing
+as "redo_wal_file" stored under `pg_wal`. 
+
+Typically on recovery, the WAL record are replayed from last checkpoint from WAL
+segment files.
+
+The structure of WAL segment file name is 
+	i) Timeline ID : 00000001 
+	ii) Log ID : 00000000 [Logical log file number]
+	iii) Segment ID: 0000005 [Sequential segment within log]
+
+Once checkpoint is reached, all dirty pages are written to disk.
+
+Overall, life cycle of WAL Segment is
+
+	1) Creation : New WAL Segment files are created as needed.
+	2) Recycling : Instead of disposing, old ones can be reused to conserve resource.
+	3) Archiving : `archive_command` allows special copy of segment files for backup
+	4) Removal : Based on `wal_keep_size` and usability, it is disposed.
+
+> Moving on next [index.md](./index.md)
