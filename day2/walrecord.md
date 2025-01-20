@@ -55,10 +55,23 @@ This returns details about the last checkpoint, helping you correlate checkpoint
 }
 ```
 
+```sql
+SELECT * FROM pg_current_wal_lsn();
+```
+
+```
+ pg_current_wal_lsn 
+--------------------
+ 0/50006B8
+(1 row)
+```
+
 We can infer that checkpoint occurred at given time and find the transaction ids as well.
 
 Initially, the dirty page [modifications] obtained from client requst are processed
-and stored within the WAL buffers.
+and stored within the shared buffers.
+
+WAL record is created and stored into WAL buffer.
 
 These buffers are flushed to disk on certain conditions, where it meet : 
 	i) Buffer is full
@@ -84,5 +97,12 @@ Overall, life cycle of WAL Segment is
 	2) Recycling : Instead of disposing, old ones can be reused to conserve resource.
 	3) Archiving : `archive_command` allows special copy of segment files for backup
 	4) Removal : Based on `wal_keep_size` and usability, it is disposed.
+
+So, do note that, WAL record are replayed and used when recovery or crashed occurs.
+Until then, the dirty pages on shared buffer are used for inserting or updating 
+the database [disk].
+
+These dirty pages on shared buffer are deferred in terms of writing into disk,
+to improve I/O operation and such.
 
 > Moving on next [index.md](./index.md)
